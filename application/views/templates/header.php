@@ -11,6 +11,9 @@
 
 		<!-- Custom styles -->
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css'); ?>">
+
+		<!-- Font awesome -->
+		<script src="https://use.fontawesome.com/e14d30caf1.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
