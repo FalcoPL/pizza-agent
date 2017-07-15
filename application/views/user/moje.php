@@ -1,5 +1,5 @@
 <div class="container-content">
 	<?php foreach($user as $profile): ?>
-		<h2>Witaj, <?php echo $profile -> user_login; ?></h2>
+		<h3>Witaj, <?php echo $profile -> user_login; ?></h3>
 	<?php endforeach; ?>
 </div>
