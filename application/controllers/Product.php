@@ -13,6 +13,7 @@
 				$this -> load -> database();
 				$this -> load -> helper('url_helper');
 				$this -> load -> library('session');
+				$this -> load -> library('cart');
 
 			// models
 				$this -> load -> model('user_model');

@@ -26,3 +26,17 @@ th, td {
 	margin-top: 20px;
 	margin-bottom: 40px;
 }
+
+.container-login form {
+	width: 300px;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	background: rgba(255, 255, 255, .8) !important;
+}
+
+.container-login label {
+
+}
