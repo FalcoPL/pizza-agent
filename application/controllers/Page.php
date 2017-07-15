@@ -17,6 +17,7 @@
 			// models
 				$this -> load -> model('user_model');
 				$this -> load -> model('product_model');
+				$this -> load -> model('page_model');
 		}
 
 		public function index()
@@ -28,7 +29,7 @@
 
 		public function view($page_name)
 		{
-			$data['pages'] = $this -> product_model -> get($page_name);
+			$data['page'] = $this -> page_model -> get($page_name);
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('pages/view', $data);
