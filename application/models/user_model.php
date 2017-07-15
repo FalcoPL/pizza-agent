@@ -24,11 +24,23 @@
 			if ($query -> num_rows() > 0) {
 				$_SESSION['user']['logged'] = true;
 				$_SESSION['user']['name'] = $data['user_login'];
-				redirect(site_url('konto/moje'));
+				echo '<pre>';
+					print_r($query -> result());
+				echo '</pre>';
+				if ($query -> result()[0] -> user_role == 'admin') {
+					redirect(site_url('admin'));
+				}
+				elseif ($query -> result()[0] -> user_role == 'staff') {
+					redirect(site_url('obsluga'));
+				}
+				else
+				{
+					redirect(site_url('konto/moje'));
+				}
 			}
 			else
 			{
-				$this -> alerts_model -> alert('danger', 'Podane przez Ciebie dane są błędne!');
+				$this -> alert_model -> alert('danger', 'Podane przez Ciebie dane są błędne!');
 			}
 		}
 	}

@@ -18,6 +18,7 @@
 				$this -> load -> model('user_model');
 				$this -> load -> model('product_model');
 				$this -> load -> model('admin_model');
+				$this -> load -> model('alert_model');
 		}
 
 		public function login()
