@@ -36,7 +36,7 @@
 						<li><a href="<?php echo site_url('kontakt'); ?>">Kontakt</a></li>
 						<?php if (isset($_SESSION) && @$_SESSION['user']['logged'] == true): ?>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <?php echo @$_SESSION['user']['first_name']; ?> <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <?php echo $_SESSION['user']['login']; ?> <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="<?php echo site_url('zamow'); ?>" >Zamów pizzę!</a></li>
 									<li class="divider"></li>

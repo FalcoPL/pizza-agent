@@ -23,10 +23,10 @@
 
 			if ($query -> num_rows() > 0) {
 				$_SESSION['user']['logged'] = true;
-				$_SESSION['user']['name'] = $data['user_login'];
-				echo '<pre>';
-					print_r($query -> result());
-				echo '</pre>';
+				$_SESSION['user']['login'] = $data['user_login'];
+
+				$_SESSION['user']['id'] = $query -> result()[0] -> user_id;
+
 				if ($query -> result()[0] -> user_role == 'admin') {
 					redirect(site_url('admin'));
 				}
@@ -41,6 +41,49 @@
 			else
 			{
 				$this -> alert_model -> alert('danger', 'Podane przez Ciebie dane są błędne!');
+			}
+		}
+
+		public function logout()
+		{
+			session_destroy();
+			$_SESSION['user']['logged'] = false;
+			$_SESSION = array();
+
+			redirect(site_url());
+		}
+
+		public function register($data)
+		{
+
+			$query = $this -> db -> get_where('users', array('user_login' => $data['user_login']));
+			unset($data['register']);
+
+			if ($query -> num_rows() > 0) {
+				$this -> alert_model -> alert('danger', 'Ten login jest zajęty!');
+			}
+			else
+			{
+				$this -> db -> insert('users', $data);
+
+				$_SESSION['user']['logged'] = true;
+				$_SESSION['user']['login'] = $data['login'];
+				$_SESSION['user']['id'] = $this -> db -> insert_id();
+
+				redirect(site_url('konto/moje'));
+			}
+		}
+
+		public function get($id = false)
+		{
+			if ($id == false) {
+					
+			}
+			else
+			{
+				$query = $this -> db -> get_where('users', array('user_id' => $id));
+
+				return $query -> result();
 			}
 		}
 	}

@@ -23,17 +23,8 @@
 
 		public function login()
 		{
-
-			if ($this -> input -> post('user_name') !== '' && $this -> input -> post('user_pass')) {
-				$data['response'] = $this -> user_model -> login($this -> input -> post);
-			}
-			else
-			{
-				$data['response'] = '';
-			}
-
 			$this -> load -> view('templates/header');
-			$this -> load -> view('user/login', $data);
+			$this -> load -> view('user/login');
 			$this -> load -> view('templates/footer');
 		}
 
@@ -44,21 +35,15 @@
 
 		public function register()
 		{
-			if ($this -> input -> post('user_name') !== '' && $this -> input -> post('user_pass')) {
-				$data['response'] = $this -> user_model -> login($this -> input -> post);
-			}
-			else
-			{
-				$data['response'] = '';
-			}
-
 			$this -> load -> view('templates/header');
-			$this -> load -> view('user/register', $data);
+			$this -> load -> view('user/register');
 			$this -> load -> view('templates/footer');
 		}
 
 		public function view($page = 'account')
 		{
+			$data['user'] = $this -> user_model -> get($_SESSION['user']['id']);
+
 			$this -> load -> view('templates/header');
 			$this -> load -> view('user/templates/header');
 			$this -> load -> view('user/'.$page, $data);

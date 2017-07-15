@@ -12,6 +12,6 @@
 
 		public function alert($type, $content)
 		{
-			# code...
+			echo '<div class="alert alert-'.$type.'">'.$content.'</div>';
 		}
 	}
