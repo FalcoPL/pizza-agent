@@ -55,5 +55,13 @@
 			$this -> load -> view('user/register', $data);
 			$this -> load -> view('templates/footer');
 		}
+
+		public function view($page = 'account')
+		{
+			$this -> load -> view('templates/header');
+			$this -> load -> view('user/templates/header');
+			$this -> load -> view('user/'.$page, $data);
+			$this -> load -> view('templates/footer');
+		}
 	}
 ?>
