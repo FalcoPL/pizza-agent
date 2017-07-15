@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'pizza_agent',
+	'hostname' => '192.168.101.142',
+	'username' => 'thejacol_pizza',
+	'password' => '20170715',
+	'database' => 'thejacol_pizza-agent',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
