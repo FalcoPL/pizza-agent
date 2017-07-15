@@ -51,11 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'product/index';
 $route['dostawa'] = 'page/view/dostawa';
+$route['kontakt'] = 'page/view/kontakt';
 
 $route['zaloguj'] = 'user/login';
 $route['zarejestruj'] = 'user/register';
 $route['konto/(:any)'] = 'user/view/$1';
 
-// $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
