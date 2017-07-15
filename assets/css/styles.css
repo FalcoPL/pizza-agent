@@ -1,0 +1,14 @@
+body {
+	background-image: url(../img/bg2.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+nav, footer {
+	background: rgba(255, 255, 255, .8) !important;
+}
+
+footer {
+	border-top: 1px solid #e0e0e0;
+	padding-top: 10px;
+}

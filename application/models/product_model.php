@@ -9,4 +9,11 @@
 		{
 			# code...
 		}
+
+		public function get()
+		{
+			$query = $this -> db -> get('products');
+
+			return $query -> result();
+		}
 	}

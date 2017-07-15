@@ -24,7 +24,7 @@
 			$data['products'] = $this -> product_model -> get();
 
 			$this->load->view('templates/header', $data);
-			$this->load->view('priduct/index', $data);
+			$this->load->view('product/index', $data);
 			$this->load->view('templates/footer', $data);
 		}
 
