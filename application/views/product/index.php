@@ -9,7 +9,6 @@
 				<th class="text-center">Mała <br> <small><i>25 cm</i></small></th>
 				<th class="text-center">Średnia <br> <small><i>35 cm</i></small></th>
 				<th class="text-center">Duża <br> <small><i>45 cm</i></small></th>
-				<th class="text-center">Do koszyka</th>
 			</tr>
 			<?php foreach($products as $product): ?>
 			<tr>

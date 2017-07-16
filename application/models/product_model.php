@@ -36,5 +36,7 @@
 							);
 
 			$this -> cart -> insert($data);
+
+			redirect(site_url());
 		}
 	}
