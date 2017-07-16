@@ -24,7 +24,7 @@
 
 		public function index()
 		{ 
-			$data['products'] = $this -> product_model -> get();
+			$data['pizzas'] = $this -> product_model -> get('pizzas');
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('product/index', $data);
@@ -33,7 +33,7 @@
 
 		public function view($id)
 		{
-			$data['products'] = $this -> product_model -> get($id);
+			$data['products'] = $this -> product_model -> get(false, $id);
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('product/view', $data);

@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'product/index';
 $route['dostawa'] = 'page/view/dostawa';
 $route['kontakt'] = 'page/view/kontakt';
+$route['koszyk'] = 'cart/index';
 
 $route['zaloguj'] = 'user/login';
 $route['zarejestruj'] = 'user/register';

@@ -34,7 +34,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?php echo site_url('dostawa'); ?>">Dostawa</a></li>
 						<li><a href="<?php echo site_url('kontakt'); ?>">Kontakt</a></li>
-						<li><a href="<?php echo site_url('kontakt'); ?>">MÓJ KOSZYK <span class="badge"><?php echo $this -> cart -> total(); ?> zł</span></a></li>
+						<li><a href="<?php echo site_url('koszyk'); ?>">MÓJ KOSZYK <span class="badge"><?php echo $this -> cart -> total(); ?> zł</span></a></li>
 						<?php if (isset($_SESSION) && @$_SESSION['user']['logged'] == true): ?>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <?php echo $_SESSION['user']['login']; ?> <b class="caret"></b></a>
