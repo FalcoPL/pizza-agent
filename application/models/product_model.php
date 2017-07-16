@@ -12,7 +12,7 @@
 
 		public function get()
 		{
-			$query = $this -> db -> get('products');
+			$query = $this -> db -> get('pizzas');
 
 			return $query -> result();
 		}

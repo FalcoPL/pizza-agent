@@ -21,7 +21,7 @@
 
 		public function index()
 		{ 
-			$data['products'] = $this -> product_model -> get();
+			$data['pizzas'] = $this -> product_model -> get();
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('product/index', $data);
