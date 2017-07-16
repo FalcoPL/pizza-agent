@@ -42,6 +42,7 @@
 
 		public function view($page = 'account')
 		{
+			$this -> user_model -> check_login();
 			$data['user'] = $this -> user_model -> get($_SESSION['user']['id']);
 
 			$this -> load -> view('templates/header');

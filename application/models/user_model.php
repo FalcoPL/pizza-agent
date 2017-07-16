@@ -86,4 +86,18 @@
 				return $query -> result();
 			}
 		}
+
+		public function update($data)
+		{
+			$this -> user_model -> check_login();
+
+			if ($data['user_pass'] !== '') {
+				unset($data['save']);
+				$this -> db -> update('users', $data);
+			}
+			else
+			{
+				$this -> alert_model -> alert('danger', 'Pole <b>hasło</b> nie może być puste!');
+			}
+		}
 	}
