@@ -26,7 +26,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Pizza Agent <small> - Twoja pizzeria w zasięgu ręki!</small></a>
+					<a class="navbar-brand" href="<?php echo site_url(); ?>">Pizza Agent <small> - Twoja pizzeria w zasięgu ręki!</small></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,14 +34,15 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?php echo site_url('dostawa'); ?>">Dostawa</a></li>
 						<li><a href="<?php echo site_url('kontakt'); ?>">Kontakt</a></li>
+						<li><a href="<?php echo site_url('kontakt'); ?>">MÓJ KOSZYK <span class="badge"><?php echo $this -> cart -> total(); ?> zł</span></a></li>
 						<?php if (isset($_SESSION) && @$_SESSION['user']['logged'] == true): ?>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <?php echo @$_SESSION['user']['first_name']; ?> <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cześć, <?php echo $_SESSION['user']['login']; ?> <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a href="<?php echo site_url('zamow'); ?>" >Zamów pizzę!</a></li>
+									<li><a href="<?php echo site_url(); ?>" >Zamów pizzę!</a></li>
 									<li class="divider"></li>
 									<li><a href="<?php echo site_url('konto/moje'); ?>">Moje konto</a></li>
-									<li><a href="<?php echo site_url('konto/rabaty'); ?>">Moje rabaty</a></li>
+									<!-- <li><a href="<?php echo site_url('konto/rabaty'); ?>">Moje rabaty</a></li> -->
 									<li class="divider"></li>
 									<li><a href="<?php echo site_url('wyloguj'); ?>">Wyloguj</a></li>
 								</ul>

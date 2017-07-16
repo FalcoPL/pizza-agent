@@ -13,26 +13,20 @@
 				$this -> load -> database();
 				$this -> load -> helper('url_helper');
 				$this -> load -> library('session');
+				$this -> load -> library('cart');
 
 			// models
 				$this -> load -> model('user_model');
 				$this -> load -> model('product_model');
 				$this -> load -> model('admin_model');
+				$this -> load -> model('alert_model');
+				$this -> load -> model('cart_model');
 		}
 
 		public function login()
 		{
-
-			if ($this -> input -> post('user_name') !== '' && $this -> input -> post('user_pass')) {
-				$data['response'] = $this -> user_model -> login($this -> input -> post);
-			}
-			else
-			{
-				$data['response'] = '';
-			}
-
 			$this -> load -> view('templates/header');
-			$this -> load -> view('user/login', $data);
+			$this -> load -> view('user/login');
 			$this -> load -> view('templates/footer');
 		}
 
@@ -43,23 +37,18 @@
 
 		public function register()
 		{
-			if ($this -> input -> post('user_name') !== '' && $this -> input -> post('user_pass')) {
-				$data['response'] = $this -> user_model -> login($this -> input -> post);
-			}
-			else
-			{
-				$data['response'] = '';
-			}
-
 			$this -> load -> view('templates/header');
-			$this -> load -> view('user/register', $data);
+			$this -> load -> view('user/register');
 			$this -> load -> view('templates/footer');
 		}
 
 		public function view($page = 'account')
 		{
+			$this -> user_model -> check_login();
+			$data['user'] = $this -> user_model -> get($_SESSION['user']['id']);
+
 			$this -> load -> view('templates/header');
-			$this -> load -> view('user/templates/header');
+			// $this -> load -> view('user/templates/header');
 			$this -> load -> view('user/'.$page, $data);
 			$this -> load -> view('templates/footer');
 		}

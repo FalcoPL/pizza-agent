@@ -14,11 +14,14 @@
 				$this -> load -> helper('url_helper');
 				$this -> load -> library('session');
 				$this -> load -> library('pagination');
+				$this -> load -> library('cart');
 
 			// models
 				$this -> load -> model('user_model');
 				$this -> load -> model('product_model');
 				$this -> load -> model('admin_model');
+				$this -> load -> model('alert_model');
+				$this -> load -> model('cart_model');
 		}
 
 		public function view($page = 'home')
