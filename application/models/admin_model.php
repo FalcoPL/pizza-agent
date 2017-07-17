@@ -9,4 +9,12 @@
 		{
 			# code...
 		}
+		
+		public function category($data)
+		{
+			
+			$query = $this -> db -> insert()
+
+		}
+		
 	}

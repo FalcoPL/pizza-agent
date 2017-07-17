@@ -56,6 +56,7 @@ $route['kontakt'] = 'page/view/kontakt';
 $route['zaloguj'] = 'user/login';
 $route['zarejestruj'] = 'user/register';
 $route['konto/(:any)'] = 'user/view/$1';
+$route['admin/(:any)'] = 'admin/view/$1';
 $route['wyloguj'] = 'user/logout';
 
 $route['404_override'] = '';

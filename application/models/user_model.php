@@ -28,7 +28,7 @@
 				$_SESSION['user']['id'] = $query -> result()[0] -> user_id;
 
 				if ($query -> result()[0] -> user_role == 'admin') {
-					redirect(site_url('admin'));
+					redirect(site_url('admin/panel'));
 				}
 				elseif ($query -> result()[0] -> user_role == 'staff') {
 					redirect(site_url('obsluga'));

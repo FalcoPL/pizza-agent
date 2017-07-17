@@ -24,7 +24,7 @@
 				$this -> load -> model('cart_model');
 		}
 
-		public function view($page = 'home')
+		public function view($page)
 		{
 			if (!file_exists(APPPATH.'views/admin/'.$page.'.php'))
 			{
