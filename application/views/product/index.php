@@ -15,9 +15,9 @@
 			<td class="text-center"><?php echo $pizza -> pizza_no; ?>.</td>
 			<td><?php echo $pizza -> pizza_title; ?></td>
 			<td><?php echo $pizza -> pizza_components; ?></td>
-			<td class="text-center"><?php echo $pizza -> pizza_price1; ?> zł</td>
-			<td class="text-center"><?php echo $pizza -> pizza_price2; ?> zł</td>
-			<td class="text-center"><?php echo $pizza -> pizza_price3; ?> zł</td>
+			<td class="text-center"><?php echo $pizza -> pizza_price; ?> zł</td>
+			<td class="text-center"><?php echo $pizza -> pizza_price; ?> zł</td>
+			<td class="text-center"><?php echo $pizza -> pizza_price; ?> zł</td>
 			<td class="text-center"><a class="btn btn-warning" href="#" role="button"><span class="fa fa-shopping-basket"></span></a></td>
 		</tr>
 		<?php endforeach; ?>
