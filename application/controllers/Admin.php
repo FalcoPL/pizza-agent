@@ -30,9 +30,10 @@
 			{
 			        show_404();
 			}
-						
+			$data['types'] = $this -> admin_model -> show_types();
+			$data['products'] = $this -> admin_model -> show_products();
 			$this->load->view('templates/header');
-			$this->load->view('admin/'.$page);
+			$this->load->view('admin/'.$page, $data);
 			$this->load->view('templates/footer');
 		}
 

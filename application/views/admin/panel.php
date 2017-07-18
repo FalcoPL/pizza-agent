@@ -1,7 +1,24 @@
+<?php if (isset($_POST['category'])) $this -> admin_model -> add_category($_POST["category"]); ?>
+
+<?php/*
+
+foreach($types as $typ){
+	echo $typ -> type_name;
+	
+	Jakoś trzeba zaprezentować...
+}
+*/
+?>
+
+
+
 <a href="" id="add">Dodaj Kategorię</a>
 
-<form action="" method="POST" id="form">
-	
+<form action="" method="POST">
+<div id="form">
+
+</div>
+<input type="submit"/>
 </form>
 
 <script type="text/javascript">
@@ -22,3 +39,4 @@ $(document).ready(function() {
 });
 
 </script>
+
